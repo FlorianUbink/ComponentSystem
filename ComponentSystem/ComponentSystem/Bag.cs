@@ -9,11 +9,8 @@ namespace ComponentSystem
 {
     public class Bag
     {
-
-
+        // Add Data properties here
         public int objectid { get; set; }
-
-        public Vector2 position { get; set; }
 
     }
 }

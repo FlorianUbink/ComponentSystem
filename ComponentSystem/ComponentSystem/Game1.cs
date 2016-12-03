@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ComponentSystem.Components;
+using ComponentSystem.Managers;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,6 +13,7 @@ namespace ComponentSystem
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        ComponentManager componentManager;
 
         public Game1()
         {
@@ -27,6 +30,7 @@ namespace ComponentSystem
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            componentManager = new ComponentManager();
 
             base.Initialize();
         }
@@ -63,6 +67,7 @@ namespace ComponentSystem
                 Exit();
 
             // TODO: Add your update logic here
+            componentManager.Update();
 
             base.Update(gameTime);
         }

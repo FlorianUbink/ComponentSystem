@@ -10,18 +10,18 @@ namespace ComponentSystem
     public class GameObject
     {
         #region Fields
-        Bag myBag;
+        public Bag myBag;
         #endregion
 
         public GameObject(int objectid)
         {
-            myBag = new Bag();
-            myBag.objectid = objectid;
+            myBag = new Bag(); // Creates new instance of Bag
+            myBag.objectid = objectid; // adds objectid to Bag property
         }
 
         public void Distroy()
         {
-            myBag = null;
+            myBag = null; // removes Bag
         }
     }
 }
